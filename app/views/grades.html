@@ -1,0 +1,14 @@
+
+<table class="table table-striped">
+
+    <thead>
+    <tr>
+        <td ng-Click="gradesCtr.doSort('name')">Class</td>
+        <td ng-Click="gradesCtr.doSort('grade')">Grade</td>
+     </tr>
+    </thead>
+    <tr ng-repeat="class in gradesCtr.grades | orderBy:gradesCtr.sortBy:gradesCtr.reverse">
+        <td>{{class.name}}</td>
+        <td>{{class.grade}}</td>
+    </tr>
+</table>

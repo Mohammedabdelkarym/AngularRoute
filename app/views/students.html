@@ -1,0 +1,18 @@
+
+<table class="table table-striped">
+
+    <thead>
+    <tr>
+        <th ng-click="studentsCtr.doSort('id')">ID</th>
+        <th ng-click="studentsCtr.doSort('name')">Name</th>
+        <th ng-click="studentsCtr.doSort('age')">Age</th>
+    </tr>
+    </thead>
+    <tr ng-repeat="student in studentsCtr.students | orderBy:studentsCtr.sortBy:studentsCtr.reverse" >
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td><a href="#/studentGrades/{{student.id}}">Grades</a></td>
+    </tr>
+
+</table>
